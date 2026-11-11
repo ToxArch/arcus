@@ -16,6 +16,12 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/ToxArch"><img src="https://img.shields.io/badge/organization-ToxArch-161b22?style=flat-square" alt="Organization"></a>
+  <a href="research/"><img src="https://img.shields.io/badge/stage-pre--project_research-161b22?style=flat-square" alt="Stage"></a>
+  <a href="research/docs/foundations/broadband-access-topologies.md"><img src="https://img.shields.io/badge/focus-broadband_architecture-161b22?style=flat-square" alt="Focus"></a>
+</p>
+
+<p align="center">
   <a href="#core-problem-space">Problem Space</a> |
   <a href="#conceptual-architecture">Conceptual Architecture</a> |
   <a href="#the-25-chapter-research-corpus">Research Corpus</a> |
