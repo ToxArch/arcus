@@ -1,10 +1,3 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/logo.png">
-    <img alt="ARCUS Sentinel Architecture" src="assets/logo.png" width="450" onerror="this.style.display='none'">
-  </picture>
-</p>
-
 <h1 align="center">A R C U S</h1>
 
 <p align="center">
