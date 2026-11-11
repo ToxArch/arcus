@@ -1,12 +1,12 @@
 # Hardware Sizing & Capacity Specifications
 
-This dossier provides empirical hardware capacity sizing matrices, compute allocations, and storage calculations for deploying the detection and attribution architecture across three standard regional ISP tiers: Tier-A (5,000 subscribers), Tier-B (15,000 subscribers), and Tier-C (30,000 subscribers).
+This dossier provides empirical hardware capacity sizing matrices, compute allocations, and storage calculations for deploying the detection and attribution architecture across three regional deployment scales: Small Scale (5,000 subscribers), Medium Scale (15,000 subscribers), and Large Scale (30,000 subscribers).
 
 ---
 
 ## 1. Traffic & Ingestion Workload Profiles
 
-| Dimension | Tier-A (5,000 Subs) | Tier-B (15,000 Subs) | Tier-C (30,000 Subs) |
+| Dimension | Small Scale (5,000 Subs) | Medium Scale (15,000 Subs) | Large Scale (30,000 Subs) |
 | :--- | :--- | :--- | :--- |
 | **Aggregated Peak Transit Throughput** | 2.5 Gbps to 5.0 Gbps | 8.0 Gbps to 15.0 Gbps | 18.0 Gbps to 30.0 Gbps |
 | **Unsampled Flow Export Rate (IPFIX)** | 6,250 flows/sec | 18,750 flows/sec | 37,500 flows/sec |
@@ -18,7 +18,7 @@ This dossier provides empirical hardware capacity sizing matrices, compute alloc
 
 ## 2. Server Hardware Sizing Matrix (Single 1U/2U Appliance)
 
-| Hardware Component | Tier-A Specification | Tier-B Specification | Tier-C Specification |
+| Hardware Component | Small Scale (5k Subs) | Medium Scale (15k Subs) | Large Scale (30k Subs) |
 | :--- | :--- | :--- | :--- |
 | **Form Factor** | 1U Rackmount Server | 1U/2U Rackmount Server | 2U Rackmount Server |
 | **Processor (CPU)** | 1x AMD EPYC 4344P (8 cores / 16 threads, 3.8 GHz) or Intel Xeon E-2388G | 1x AMD EPYC 8324P (32 cores / 64 threads) or Intel Xeon Silver 4410Y | 2x AMD EPYC 9124 (2x 16 cores / 64 threads) or 1x EPYC 9354 (32c/64t) |
@@ -35,7 +35,7 @@ This dossier provides empirical hardware capacity sizing matrices, compute alloc
 To guarantee deterministic zero-packet-drop performance, CPU cores are strictly partitioned using Linux CPU isolation (`isolcpus`, `taskset`):
 
 ```
-Tier-B 32-Core CPU Allocation Map:
+Medium Scale (15,000 Subscribers) 32-Core CPU Allocation Map:
 [Core 0-1]   : Linux OS, System Daemons, NPLI NTP Daemon, SSH Management
 [Core 2-5]   : ClickHouse Analytical Storage Engine (SIMD Vector Execution)
 [Core 6-7]   : GoFlow2 Unsampled IPFIX Collector + Kafka / Redis Stream Ingestion

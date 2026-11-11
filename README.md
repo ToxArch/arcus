@@ -134,7 +134,7 @@ The full pre-project findings are modularized inside the [`research/`](research/
 
 Reference hardware capacity specifications derived for x86-64 server architectures across standard subscriber tiers:
 
-| Component / Metric | Tier-A (5,000 Subscribers) | Tier-B (15,000 Subscribers) | Tier-C (30,000 Subscribers) |
+| Component / Metric | Small ISP (5,000 Subscribers) | Medium ISP (15,000 Subscribers) | Large ISP (30,000 Subscribers) |
 | :--- | :--- | :--- | :--- |
 | **Estimated Peak Throughput** | 2.5 Gbps to 5.0 Gbps | 8.0 Gbps to 15.0 Gbps | 18.0 Gbps to 30.0 Gbps |
 | **Unsampled Flow Export** | 6,250 flows/sec | 18,750 flows/sec | 37,500 flows/sec |
