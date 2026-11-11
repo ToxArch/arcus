@@ -53,6 +53,21 @@ Regional broadband operators across Indian telecom circles operate under unique 
 ## Conceptual Architecture
 
 ```mermaid
+flowchart LR
+    A["1. Access & Telemetry<br/>(IPFIX / SPAN / RADIUS)"] --> B["2. Analytics Core<br/>(Suricata / ClickHouse)"]
+    B --> C["3. Two-Tier Attribution<br/>(CGNAT PBA + radacct)"]
+    C --> D["4. Containment<br/>(RFC 6561 Walled Garden)"]
+    D --> E["5. Evidence & Dispatch<br/>(BSA 2023 / CERT-In)"]
+
+    classDef primary fill:#161b22,stroke:#58a6ff,stroke-width:1.5px,color:#f0f6fc;
+    class A,B,C,D,E primary;
+```
+
+<details>
+<summary><b>Detailed Subsystem Data Flow (click to expand)</b></summary>
+<br>
+
+```mermaid
 flowchart TD
     subgraph AccessLayer ["1. Access Layer and Telemetry Ingestion"]
         ONT["Residential FTTH Subscribers<br/>(ONTs / Smart TVs / IoT)"] -->|PPPoE / IPoE Dual-Stack| BNG["Broadband Network Gateway (BNG)<br/>(MikroTik CCR / Cisco ASR)"]
@@ -94,6 +109,8 @@ flowchart TD
     class DecisionBoundary highlight;
     class ComplianceSovereign warning;
 ```
+
+</details>
 
 ---
 
