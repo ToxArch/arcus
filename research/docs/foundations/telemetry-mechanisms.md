@@ -35,9 +35,9 @@ Carriers frequently apply packet sampling (e.g., 1:1000) on core transit interfa
 Let an infected IoT device emit a stealthy Command and Control (C2) keepalive beacon consisting of $n=1$ packet every 60 seconds.
 Under a sampling rate of $R = 1/1000$:
 The probability of detecting the beacon in a given 60-second window is:
-$$P(	ext{Detect}) = rac{1}{1000} = 0.001 \quad (0.1\%)$$
-The probability that the C2 beacon goes completely undetected over a 24-hour observation window ($N = 1,440 	ext{ intervals}$) is:
-$$P(	ext{Undetected in 24h}) = (1 - 0.001)^{1440} pprox 0.2367 \quad (23.7\%)$$
+$$P(\text{Detect}) = \frac{1}{1000} = 0.001 \quad (0.1\%)$$
+The probability that the C2 beacon goes completely undetected over a 24-hour observation window ($N = 1,440 \text{ intervals}$) is:
+$$P(\text{Undetected in 24h}) = (1 - 0.001)^{1440} \approx 0.2367 \quad (23.7\%)$$
 Nearly a quarter of active botnet beacons are completely invisible under 1:1000 sampling.
 
 **Conclusion:** Reliable compromise detection mandates **1:1 unsampled flow capture on aggregation links** using high-throughput collectors like **GoFlow2**, or direct optical SPAN/TAP line-rate inspection.

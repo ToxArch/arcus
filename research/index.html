@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ARCUS Pre-Project Research Dossier</title>
   <!-- MathJax for rendering LaTeX formulas -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     :root {
@@ -968,9 +967,9 @@ Scope: <strong>Pure Explanatory Architecture, Empirical Data, Malware Disassembl
 <p>Let an infected IoT device emit a stealthy Command and Control (C2) keepalive beacon consisting of $n=1$ packet every 60 seconds.<br />
 Under a sampling rate of $R = 1/1000$:<br />
 The probability of detecting the beacon in a given 60-second window is:<br />
-$$P(    ext{Detect}) = rac{1}{1000} = 0.001 \quad (0.1\%)$$<br />
-The probability that the C2 beacon goes completely undetected over a 24-hour observation window ($N = 1,440     ext{ intervals}$) is:<br />
-$$P(    ext{Undetected in 24h}) = (1 - 0.001)^{1440} pprox 0.2367 \quad (23.7\%)$$<br />
+$$P(\text{Detect}) = \frac{1}{1000} = 0.001 \quad (0.1\%)$$<br />
+The probability that the C2 beacon goes completely undetected over a 24-hour observation window ($N = 1,440 \text{ intervals}$) is:<br />
+$$P(\text{Undetected in 24h}) = (1 - 0.001)^{1440} \approx 0.2367 \quad (23.7\%)$$<br />
 Nearly a quarter of active botnet beacons are completely invisible under 1:1000 sampling.</p>
 <p><strong>Conclusion:</strong> Reliable compromise detection mandates <strong>1:1 unsampled flow capture on aggregation links</strong> using high-throughput collectors like <strong>GoFlow2</strong>, or direct optical SPAN/TAP line-rate inspection.</p>
       </div>
@@ -2784,16 +2783,16 @@ Scan subscriber pre-NAT IP (100.64.x.y) for open vulnerable ports:
       <div class="breadcrumb">7. Evidence & Sizing &rsaquo; docs/evidence/hardware-capacity-specifications.md</div>
       <div class="markdown-body">
         <h1>Hardware Sizing &amp; Capacity Specifications</h1>
-<p>This dossier provides empirical hardware capacity sizing matrices, compute allocations, and storage calculations for deploying the detection and attribution architecture across three standard regional ISP tiers: Tier-A (5,000 subscribers), Tier-B (15,000 subscribers), and Tier-C (30,000 subscribers).</p>
+<p>This dossier provides empirical hardware capacity sizing matrices, compute allocations, and storage calculations for deploying the detection and attribution architecture across three regional deployment scales: Small Scale (5,000 subscribers), Medium Scale (15,000 subscribers), and Large Scale (30,000 subscribers).</p>
 <hr />
 <h2>1. Traffic &amp; Ingestion Workload Profiles</h2>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Dimension</th>
-<th style="text-align: left;">Tier-A (5,000 Subs)</th>
-<th style="text-align: left;">Tier-B (15,000 Subs)</th>
-<th style="text-align: left;">Tier-C (30,000 Subs)</th>
+<th style="text-align: left;">Small Scale (5,000 Subs)</th>
+<th style="text-align: left;">Medium Scale (15,000 Subs)</th>
+<th style="text-align: left;">Large Scale (30,000 Subs)</th>
 </tr>
 </thead>
 <tbody>
@@ -2835,9 +2834,9 @@ Scan subscriber pre-NAT IP (100.64.x.y) for open vulnerable ports:
 <thead>
 <tr>
 <th style="text-align: left;">Hardware Component</th>
-<th style="text-align: left;">Tier-A Specification</th>
-<th style="text-align: left;">Tier-B Specification</th>
-<th style="text-align: left;">Tier-C Specification</th>
+<th style="text-align: left;">Small Scale (5k Subs)</th>
+<th style="text-align: left;">Medium Scale (15k Subs)</th>
+<th style="text-align: left;">Large Scale (30k Subs)</th>
 </tr>
 </thead>
 <tbody>
@@ -2888,7 +2887,7 @@ Scan subscriber pre-NAT IP (100.64.x.y) for open vulnerable ports:
 <hr />
 <h2>3. Subsystem Core &amp; Resource Allocations</h2>
 <p>To guarantee deterministic zero-packet-drop performance, CPU cores are strictly partitioned using Linux CPU isolation (<code>isolcpus</code>, <code>taskset</code>):</p>
-<pre><code>Tier-B 32-Core CPU Allocation Map:
+<pre><code>Medium Scale (15,000 Subscribers) 32-Core CPU Allocation Map:
 [Core 0-1]   : Linux OS, System Daemons, NPLI NTP Daemon, SSH Management
 [Core 2-5]   : ClickHouse Analytical Storage Engine (SIMD Vector Execution)
 [Core 6-7]   : GoFlow2 Unsampled IPFIX Collector + Kafka / Redis Stream Ingestion
@@ -2931,15 +2930,24 @@ Scan subscriber pre-NAT IP (100.64.x.y) for open vulnerable ports:
 
     function filterNav() {
       const query = document.getElementById('filterInput').value.toLowerCase();
-      document.querySelectorAll('.nav-link').forEach(el => {
-        const text = el.innerText.toLowerCase();
-        if (text.includes(query)) {
-          el.parentElement.style.display = 'block';
-        } else {
-          el.parentElement.style.display = 'none';
+      document.querySelectorAll('.nav-group').forEach(group => {
+        let hasVisible = false;
+        group.querySelectorAll('.nav-link').forEach(el => {
+          const match = el.innerText.toLowerCase().includes(query);
+          el.parentElement.style.display = match ? 'block' : 'none';
+          if (match) hasVisible = true;
+        });
+        const title = group.previousElementSibling;
+        if (title && title.classList.contains('nav-group-title')) {
+          title.style.display = hasVisible ? 'block' : 'none';
         }
       });
     }
+
+    window.addEventListener('hashchange', () => {
+      const h = window.location.hash.replace('#', '');
+      if (h && document.getElementById(h)) showSection(h);
+    });
 
     window.addEventListener('load', () => {
       let currentHash = window.location.hash.replace('#', '');
