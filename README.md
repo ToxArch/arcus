@@ -24,12 +24,12 @@
 </p>
 
 <p align="center">
-  <a href="#-core-problem-space">Problem Space</a> •
-  <a href="#-architectural-data-flow">Data Flow Architecture</a> •
-  <a href="#-the-25-chapter-research-corpus">Research Dossier</a> •
-  <a href="#-technical-pillars--breakthroughs">Technical Pillars</a> •
-  <a href="#-hardware-capacity-matrices">Hardware Sizing</a> •
-  <a href="#-governance--ip">Governance</a>
+  <a href="#core-problem-space">Problem Space</a> |
+  <a href="#architectural-data-flow">Data Flow Architecture</a> |
+  <a href="#the-25-chapter-research-corpus">Research Dossier</a> |
+  <a href="#technical-pillars-and-breakthroughs">Technical Pillars</a> |
+  <a href="#hardware-capacity-matrices">Hardware Sizing</a> |
+  <a href="#governance-and-ip">Governance</a>
 </p>
 
 ---
@@ -39,7 +39,7 @@
 
 ---
 
-## 🎯 Core Problem Space
+## Core Problem Space
 
 Regional broadband operators across Indian telecom circles operate under severe economic and legal pressures:
 
@@ -48,12 +48,12 @@ Regional broadband operators across Indian telecom circles operate under severe 
 | **CGNAT Attribution Blindness** | Millions of sessions multiplexed across shared public IPv4 pools (RFC 6888 / RFC 6598). | Inability to resolve an abuse tuple $\langle IP_{\text{pub}}, Port_{\text{pub}}, t_{\text{incident}} \rangle$ to a physical customer line. |
 | **Dynamic NAT Log Explosion** | Per-session logging for 10,000 subscribers generates **2.16 billion records/day** ($172.8\text{ GB/day}$). | Router CPU crashes, dropped NetFlow packets, and unsustainable multi-terabyte database costs. |
 | **The Base Rate Fallacy** | Low subscriber infection base rate ($P(C) \approx 0.005$) across residential lines. | Single-rule IDS alerts produce a **66.8% False Discovery Rate**, causing mass wrongful quarantines and customer churn. |
-| **Mandatory 6-Hour SLA Clock** | CERT-In Directions 2022 enforce a strict **6-hour reporting window** from incident notice. | Manual triage breaches SLA, exposing executives to **₹1 Crore fines** (Jan Vishwas Act 2023) and Section 85 liability. |
+| **Mandatory 6-Hour SLA Clock** | CERT-In Directions 2022 enforce a strict **6-hour reporting window** from incident notice. | Manual triage breaches SLA, exposing executives to **1 Crore INR fines** (Jan Vishwas Act 2023) and Section 85 liability. |
 | **Digital Evidence Overhaul** | BSA 2023 Section 63 replaces Indian Evidence Act 65B (effective July 2024). | Unverified raw logs are legally inadmissible without SHA-256 Merkle chains and NPLI Stratum-1 time sync. |
 
 ---
 
-## ⚡ Architectural Data Flow
+## Architectural Data Flow
 
 ```mermaid
 flowchart TD
@@ -100,30 +100,30 @@ flowchart TD
 
 ---
 
-## 📚 The 25-Chapter Research Corpus
+## The 25-Chapter Research Corpus
 
 The full pre-project findings are modularized inside the [`research/`](research/) directory. You can also browse them locally through the interactive reader at [`research/index.html`](research/index.html).
 
 <details open>
-<summary><b>📖 Research Domain Directory Map</b></summary>
+<summary><b>Research Domain Directory Map</b></summary>
 <br>
 
 | Domain | Focus & Critical Findings | Dossier Links |
 | :--- | :--- | :--- |
-| **00. Meta & Methodology** | Verification boundaries, primary standards (RFC, Gazette, Acts), source tiers. | [`methodology.md`](research/docs/methodology.md) • [`README.md`](research/docs/README.md) |
-| **01. Access Foundations** | BNG/BRAS architectures, PPPoE cryptographic session binding vs. IPoE DAI/IPSG; flow sampling degradation math (1:1000 sampling drops 23.7% of C2 beacons). | [`broadband-access-topologies.md`](research/docs/foundations/broadband-access-topologies.md) • [`telemetry-mechanisms.md`](research/docs/foundations/telemetry-mechanisms.md) |
-| **02. CGNAT & Attribution** | RFC 6888/6598 standards; mathematical proof of **99.997% log reduction** via Port Block Allocation (PBA); FreeRADIUS two-tier temporal state intersection and orphaned session recovery. | [`cgnat-architecture-and-standards.md`](research/docs/cgnat-attribution/cgnat-architecture-and-standards.md) • [`log-volume-mathematics.md`](research/docs/cgnat-attribution/log-volume-mathematics.md) • [`radius-accounting-and-attribution.md`](research/docs/cgnat-attribution/radius-accounting-and-attribution.md) |
-| **03. Threat Intelligence** | Source disassembly of Mirai `scanner.c` (LCG RNG, 68 credentials, DoD exclusion list); Mozi BitTorrent DHT + ECDSA384 authentication; BadBox AOSP rootkits & upload/download ratio inversion ($\ge 1.0$ vs. normal $1:10$); Syrotech/Netlink ONT exploits; UDP amplification matrices. | [`mirai-botnet-family.md`](research/docs/threat-intel/mirai-botnet-family.md) • [`mozi-p2p-botnet.md`](research/docs/threat-intel/mozi-p2p-botnet.md) • [`residential-proxies-and-abuse.md`](research/docs/threat-intel/residential-proxies-and-abuse.md) • [`target-cpe-vulnerabilities.md`](research/docs/threat-intel/target-cpe-vulnerabilities.md) • [`outbound-abuse-profiles.md`](research/docs/threat-intel/outbound-abuse-profiles.md) |
-| **04. Detection Analytics** | Suricata `workers` zero-lock runmode; AF_PACKET MMAP ring buffer vs. DPDK; Intel Hyperscan SIMD acceleration; mathematical proof of Base Rate Fallacy; additive log-odds fusion ($\ln \text{Odds} = \ln \text{Prior} + \sum \alpha_i \ln LR_i$); ClickHouse columnar SIMD engine with 2-year retention TTLs. | [`suricata-line-rate-engine.md`](research/docs/detection-analytics/suricata-line-rate-engine.md) • [`bayesian-log-odds-fusion.md`](research/docs/detection-analytics/bayesian-log-odds-fusion.md) • [`clickhouse-columnar-storage.md`](research/docs/detection-analytics/clickhouse-columnar-storage.md) |
-| **05. Containment & Remediation** | RFC 6561 Walled Garden lifecycle; RFC 8908 & RFC 8910 Captive Portal API solving browser HSTS/TLS certificate warning lockouts; Essential OS/AV update Safe Harbor whitelists; Active synthetic scanning & 30-minute tiered probation ladder. | [`rfc6561-walled-garden-framework.md`](research/docs/containment-remediation/rfc6561-walled-garden-framework.md) • [`captive-portal-api-standards.md`](research/docs/containment-remediation/captive-portal-api-standards.md) • [`safe-harbor-remediation-whitelist.md`](research/docs/containment-remediation/safe-harbor-remediation-whitelist.md) • [`verification-and-probation-ladder.md`](research/docs/containment-remediation/verification-and-probation-ladder.md) |
-| **06. Regulatory Compliance** | Section 70B IT Act 2000; CERT-In 4-phase countdown state machine; Jan Vishwas Act 2023 ₹1 Crore penalties; Complete mapping of 20 Annexure-I incident categories to telemetry; Human-in-the-loop legal gate; BSA 2023 Section 63 Schedule Part A/B electronic evidence certificates with SHA-256 Merkle trees & NPLI Stratum-1 time sync. | [`cert-in-directions-and-sla.md`](research/docs/regulatory-compliance/cert-in-directions-and-sla.md) • [`annexure-mapping-and-reporting.md`](research/docs/regulatory-compliance/annexure-mapping-and-reporting.md) • [`human-approval-gate-rationale.md`](research/docs/regulatory-compliance/human-approval-gate-rationale.md) • [`bsa-2023-section-63-evidence.md`](research/docs/regulatory-compliance/bsa-2023-section-63-evidence.md) |
-| **07. Evidence & Sizing** | Comprehensive primary standards ledger (RFCs, Gazette orders, Acts, CVEs); Commodity 1U/2U server capacity sizing matrices for 5,000, 15,000, and 30,000 subscriber tiers. | [`standards-and-rfc-ledger.md`](research/docs/evidence/standards-and-rfc-ledger.md) • [`hardware-capacity-specifications.md`](research/docs/evidence/hardware-capacity-specifications.md) |
+| **00. Meta & Methodology** | Verification boundaries, primary standards (RFC, Gazette, Acts), source tiers. | [`methodology.md`](research/docs/methodology.md) | [`README.md`](research/docs/README.md) |
+| **01. Access Foundations** | BNG/BRAS architectures, PPPoE cryptographic session binding vs. IPoE DAI/IPSG; flow sampling degradation math (1:1000 sampling drops 23.7% of C2 beacons). | [`broadband-access-topologies.md`](research/docs/foundations/broadband-access-topologies.md) | [`telemetry-mechanisms.md`](research/docs/foundations/telemetry-mechanisms.md) |
+| **02. CGNAT & Attribution** | RFC 6888/6598 standards; mathematical proof of **99.997% log reduction** via Port Block Allocation (PBA); FreeRADIUS two-tier temporal state intersection and orphaned session recovery. | [`cgnat-architecture-and-standards.md`](research/docs/cgnat-attribution/cgnat-architecture-and-standards.md) | [`log-volume-mathematics.md`](research/docs/cgnat-attribution/log-volume-mathematics.md) | [`radius-accounting-and-attribution.md`](research/docs/cgnat-attribution/radius-accounting-and-attribution.md) |
+| **03. Threat Intelligence** | Source disassembly of Mirai `scanner.c` (LCG RNG, 68 credentials, DoD exclusion list); Mozi BitTorrent DHT + ECDSA384 authentication; BadBox AOSP rootkits & upload/download ratio inversion ($\ge 1.0$ vs. normal $1:10$); Syrotech/Netlink ONT exploits; UDP amplification matrices. | [`mirai-botnet-family.md`](research/docs/threat-intel/mirai-botnet-family.md) | [`mozi-p2p-botnet.md`](research/docs/threat-intel/mozi-p2p-botnet.md) | [`residential-proxies-and-abuse.md`](research/docs/threat-intel/residential-proxies-and-abuse.md) | [`target-cpe-vulnerabilities.md`](research/docs/threat-intel/target-cpe-vulnerabilities.md) | [`outbound-abuse-profiles.md`](research/docs/threat-intel/outbound-abuse-profiles.md) |
+| **04. Detection Analytics** | Suricata `workers` zero-lock runmode; AF_PACKET MMAP ring buffer vs. DPDK; Intel Hyperscan SIMD acceleration; mathematical proof of Base Rate Fallacy; additive log-odds fusion ($\ln \text{Odds} = \ln \text{Prior} + \sum \alpha_i \ln LR_i$); ClickHouse columnar SIMD engine with 2-year retention TTLs. | [`suricata-line-rate-engine.md`](research/docs/detection-analytics/suricata-line-rate-engine.md) | [`bayesian-log-odds-fusion.md`](research/docs/detection-analytics/bayesian-log-odds-fusion.md) | [`clickhouse-columnar-storage.md`](research/docs/detection-analytics/clickhouse-columnar-storage.md) |
+| **05. Containment & Remediation** | RFC 6561 Walled Garden lifecycle; RFC 8908 & RFC 8910 Captive Portal API solving browser HSTS/TLS certificate warning lockouts; Essential OS/AV update Safe Harbor whitelists; Active synthetic scanning & 30-minute tiered probation ladder. | [`rfc6561-walled-garden-framework.md`](research/docs/containment-remediation/rfc6561-walled-garden-framework.md) | [`captive-portal-api-standards.md`](research/docs/containment-remediation/captive-portal-api-standards.md) | [`safe-harbor-remediation-whitelist.md`](research/docs/containment-remediation/safe-harbor-remediation-whitelist.md) | [`verification-and-probation-ladder.md`](research/docs/containment-remediation/verification-and-probation-ladder.md) |
+| **06. Regulatory Compliance** | Section 70B IT Act 2000; CERT-In 4-phase countdown state machine; Jan Vishwas Act 2023 1 Crore INR penalties; Complete mapping of 20 Annexure-I incident categories to telemetry; Human-in-the-loop legal gate; BSA 2023 Section 63 Schedule Part A/B electronic evidence certificates with SHA-256 Merkle trees & NPLI Stratum-1 time sync. | [`cert-in-directions-and-sla.md`](research/docs/regulatory-compliance/cert-in-directions-and-sla.md) | [`annexure-mapping-and-reporting.md`](research/docs/regulatory-compliance/annexure-mapping-and-reporting.md) | [`human-approval-gate-rationale.md`](research/docs/regulatory-compliance/human-approval-gate-rationale.md) | [`bsa-2023-section-63-evidence.md`](research/docs/regulatory-compliance/bsa-2023-section-63-evidence.md) |
+| **07. Evidence & Sizing** | Comprehensive primary standards ledger (RFCs, Gazette orders, Acts, CVEs); Commodity 1U/2U server capacity sizing matrices for 5,000, 15,000, and 30,000 subscriber tiers. | [`standards-and-rfc-ledger.md`](research/docs/evidence/standards-and-rfc-ledger.md) | [`hardware-capacity-specifications.md`](research/docs/evidence/hardware-capacity-specifications.md) |
 
 </details>
 
 ---
 
-## 🔬 Technical Pillars & Breakthroughs
+## Technical Pillars and Breakthroughs
 
 ### 1. The PBA Log Volume Reduction (99.997%)
 Under standard per-session NAT, every single TCP/UDP connection emits a session create and session delete log. For a 10,000-subscriber FTTH network, this creates **50,000 log events/sec** ($172.8\text{ GB/day}$).
@@ -154,7 +154,7 @@ To satisfy Section 63 of the Bharatiya Sakshya Adhiniyam, 2023:
 
 ---
 
-## 🖥️ Hardware Capacity Matrices
+## Hardware Capacity Matrices
 
 ARCUS is engineered to operate on commodity off-the-shelf x86-64 rackmount appliances without specialized ASIC proprietary appliances:
 
@@ -171,7 +171,7 @@ ARCUS is engineered to operate on commodity off-the-shelf x86-64 rackmount appli
 
 ---
 
-## 🛡️ Governance & IP
+## Governance and IP
 
 * **Organization:** Developed under the **[ToxArch](https://github.com/ToxArch)** cybersecurity defense organization.
 * **Licensing:** Strategic licensing model is under active legal evaluation. **All rights reserved by ToxArch.**
