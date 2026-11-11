@@ -150,6 +150,6 @@ Reference hardware capacity specifications derived for x86-64 server architectur
 ## Governance and License
 
 * **Organization:** Maintained under the **[ToxArch](https://github.com/ToxArch)** cybersecurity defense organization.
-* **License:** Distributed under the **[ARCUS License v1.0](LICENSE)** (SPDX: `LicenseRef-ARCUS-1.0`). This is a **source-available, permission-required license**. You may view, inspect, and cite the research, but any commercial use, live network production use, or redistribution requires prior written permission from the copyright owner (Dhanush B S). See the [License Summary](LICENSE-SUMMARY.md) and [Permission Request Form](PERMISSION-REQUEST.md) for details.
+* **License:** Distributed under the **[ARCUS License v1.0](LICENSE)** (SPDX: `LicenseRef-ARCUS-1.0`). This is a **source-available, permission-required license**. You may view, inspect, and cite the research, but any commercial use, live network production use, or redistribution requires prior written permission from the copyright owner (Dhanush B S). See the [Plain-English Legal Summary](LEGAL-SUMMARY.md) and [Permission Request Form](PERMISSION-REQUEST.md) for details.
 * **Security & Vulnerability Disclosure:** Please review our [Security Policy](SECURITY.md) for responsible disclosure guidelines.
 * **Contributing:** All contributions are subject to the [Contributor License Agreement](CLA.md). See [CONTRIBUTING.md](CONTRIBUTING.md).
