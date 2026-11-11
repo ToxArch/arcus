@@ -30,12 +30,14 @@ merged, **you must review and agree to the [ARCUS Contributor License Agreement]
    - All code must pass automated CI linters and test suites.
    - Zero emojis and zero em dashes in documentation and code comments.
    - No hardcoded secrets, external API keys, or proprietary telco dumps.
-3. **CLA Affirmation:** In your Pull Request description, include the following
-   mandatory sign-off:
+3. **Automated CLA Verification:** When you open a pull request, the automated
+   CLA Assistant bot checks your signature status. If you have not signed
+   previously, reply to the bot's comment on your PR with:
    ```
-   I have read and agree to the ARCUS Contributor License Agreement (CLA.md).
-   Signed: [Your Full Legal Name] <[Your Email Address]>
+   I have read the CLA Document and I hereby sign the CLA
    ```
+   The bot automatically records your signature and unlocks the pull request
+   for review.
 
 ---
 
