@@ -1,0 +1,669 @@
+DRAFT - NOT LEGALLY REVIEWED
+===============================================================================
+ARCUS LICENSE v1.0
+===============================================================================
+SPDX-License-Identifier: LicenseRef-ARCUS-1.0
+Effective Date: 11 November 2026 [OWNER TO CONFIRM]
+Copyright (c) 2026 Dhanush B S [OWNER LEGAL NAME TO CONFIRM] / ToxArch.
+All rights reserved except those expressly granted in this License.
+===============================================================================
+
+Note on SPDX: SPDX (Software Package Data Exchange) is a standard shorthand
+label that automated tools use to identify software licenses; "LicenseRef"
+indicates a custom, non-standard license rather than a public template.
+
+This document is a source-available, permission-required legal agreement
+between the Licensor and any person or entity accessing the Work.
+
+-------------------------------------------------------------------------------
+A. BASICS
+-------------------------------------------------------------------------------
+
+1. Title and Version
+This license is formally titled the "ARCUS License v1.0" (the "License").
+SPDX identifier: LicenseRef-ARCUS-1.0.
+
+In plain English:
+This is version 1.0 of the official ARCUS license.
+
+2. Copyright Notice
+Copyright (c) 2026 Dhanush B S [OWNER LEGAL NAME TO CONFIRM] / ToxArch.
+All rights reserved except those expressly granted in this License.
+
+In plain English:
+Dhanush B S (the creator) owns all legal rights to this project. You only have
+the few specific permissions written in this document.
+
+Risk / Enforceability Note:
+"ToxArch" is an informal organization name and not a registered corporate
+body. Under Indian law, an unincorporated brand cannot hold copyright. The
+legal name of the individual owner must appear to protect ownership.
+
+3. Scope of Application
+This License applies to all files, directories, documents, architectural
+blueprints, data flow specifications, research dossiers, diagrams, images,
+mathematical formulations, schemas, and software code contained within this
+repository (collectively, the "Work"), unless a specific subfolder or file
+carries an explicit separate license or notice, in which case that separate
+notice shall govern strictly for that specific file or directory.
+
+In plain English:
+This license covers everything in this repository (both current research papers
+and any software code added in the future), unless a specific folder says
+otherwise.
+
+4. Definitions
+Throughout this License, capitalized words have the exact meanings set forth
+below:
+
+- "Commercial Use": Any use of the Work, in whole or in part, directly or
+  indirectly in or for a commercial business, revenue-generating activity,
+  monetized product, paid support service, professional consulting engagement,
+  managed service provider (MSP) offering, paid training, or any activity
+  conducted to obtain commercial advantage or financial compensation.
+  * Included Examples: Running the Work to protect paid subscribers of an ISP;
+    selling an appliance containing the Work; providing paid consulting to
+    deploy the Work; integrating the Work into a commercial SIEM.
+  * Excluded Examples: Personal self-study on a home computer without financial
+    gain; reading the research papers for unpaid academic learning.
+
+- "Contribution": Any code, documentation, bug fix, patch, translation,
+  enhancement, or other material submitted to the Licensor for inclusion in
+  the Work by You.
+
+- "Derivative Work": Any work, system, code, document, or publication that is
+  based upon, adapted from, translated from, or substantially derived from the
+  Work or any portion thereof, including republished structural summaries or
+  competing system designs substantially copying the Work's architecture.
+
+- "Licensor": Dhanush B S [OWNER LEGAL NAME TO CONFIRM], the individual copyright
+  owner of the Work.
+
+- "Operator": Any Internet Service Provider (ISP), telecommunications carrier,
+  network operator, transit provider, or enterprise operating an autonomous
+  system or broadband access infrastructure.
+
+- "Permission": An explicit, written, signed or verifiable email approval
+  granted directly by the Licensor to an identified individual or organization,
+  specifying the exact permitted scope, territory, duration, and conditions.
+
+- "Production Use": Any execution, deployment, or operation of the Work (or
+  any derivative thereof) on any live computer network, router, switch, or
+  system carrying real subscriber, user, or carrier traffic.
+
+- "Research Materials": All technical dossiers, whitepapers, mathematical
+  proofs, telemetry formulas, regulatory analyses, diagrams, and markdown
+  files contained in the Work.
+
+- "Software": Any computer code, scripts, daemons, algorithms, schemas, or
+  executable instructions contained in the Work now or added in the future.
+
+- "Work": The collective bundle of Research Materials, Software, and assets
+  made available under this License.
+
+- "You" (or "Your"): The individual or legal entity exercising any permission
+  granted under this License.
+
+In plain English:
+These are the exact legal definitions used throughout the license so there is
+no confusion about what words like "Commercial Use" or "Operator" mean.
+
+-------------------------------------------------------------------------------
+B. ALLOWED WITHOUT ASKING
+-------------------------------------------------------------------------------
+
+5. Viewing and Reading
+You may read, inspect, and view the Work publicly on its official repository
+strictly for your personal informational purposes.
+
+In plain English:
+You are allowed to read and inspect these files on GitHub.
+
+6. Academic and Journalistic Citation
+You may quote, cite, and reproduce brief excerpts from the Research Materials
+for academic papers, journalistic reports, or technical reviews, provided that:
+(a) You do not reproduce more than 250 continuous words or more than one (1)
+    diagram or table per review [OWNER TO CONFIRM];
+(b) You provide prominent attribution to "ARCUS by ToxArch" with a direct link
+    to https://github.com/ToxArch/arcus; and
+(c) The citation is not used to create a competing product, service, or
+    commercial publication.
+
+In plain English:
+You can quote small snippets or one diagram in a research paper or article, as
+long as you give clear credit and a link to this repository.
+
+Risk / Enforceability Note:
+Section 52(1)(a) of the Indian Copyright Act, 1957 provides a statutory "fair
+dealing" exception for criticism, review, and reporting. You cannot restrict
+citations narrower than what Indian fair dealing law already permits.
+
+7. Personal and Non-Commercial Academic Study
+You may download and review the Research Materials on a single local computer
+solely for personal educational study or unpaid university coursework, provided
+no live network deployment, production subscriber traffic, or commercial entity
+benefits from such study.
+
+In plain English:
+Students and researchers can study these papers on their personal computer for
+school or university classes for free, as long as it is not for a business.
+
+8. Repository Forking
+[OPTIONAL - OWNER TO CONFIRM]
+You may fork this repository within GitHub solely for the purpose of personal
+reading, local study, or preparing a Contribution to submit back to the
+Licensor. Any public redistribution of a fork outside GitHub, or use of a fork
+for unauthorized Commercial Use or Production Use, is strictly prohibited.
+
+In plain English:
+You can click the "Fork" button on GitHub to read or propose changes to the
+project, but you cannot use that fork to launch a competing product.
+
+Risk / Enforceability Note:
+GitHub's Terms of Service (Section D.4) require public repository owners to
+grant all GitHub users the right to fork the repository within GitHub. This
+clause aligns with GitHub's platform rules while barring external deployment.
+[VERIFY interaction with GitHub Terms of Service].
+
+-------------------------------------------------------------------------------
+C. REQUIRES PRIOR WRITTEN PERMISSION
+-------------------------------------------------------------------------------
+
+9. Prohibition on Production Use
+You shall not deploy, execute, test, or operate the Software or any part of the
+Work on any live network carrying active subscriber or commercial traffic
+without prior written Permission from the Licensor.
+
+In plain English:
+You cannot run this software or test it on a live ISP network without written
+permission from the owner.
+
+10. Prohibition on Commercial Use
+You shall not engage in any Commercial Use of the Work, or any part thereof,
+without prior written Permission from the Licensor.
+
+In plain English:
+No business, consultant, or company can use this work to make money or assist
+their operations without written permission.
+
+11. Prohibition on Republication and Redistribution
+You shall not copy, mirror, republish, redistribute, sublicense, or sell the
+Work, in whole or in substantial part, on any website, book, package, or
+platform without prior written Permission from the Licensor.
+
+In plain English:
+You cannot copy-paste these research papers or code onto another website, blog,
+or product without permission.
+
+12. Prohibition on Derivative Works
+You shall not adapt, translate, modify, build upon, or create Derivative Works
+from the Work without prior written Permission from the Licensor.
+
+In plain English:
+You cannot modify these files or build a customized version without written
+permission.
+
+13. Prohibition on Competing Systems
+You shall not use the architecture, formulas, disassemblies, or research
+contained in the Work to design, develop, market, or operate a competing
+commercial product or service.
+
+In plain English:
+You cannot read this research and use it to build a competing software product
+to sell to ISPs.
+
+Risk / Enforceability Note:
+Under Indian and international copyright law, copyright protects the specific
+"expression" of an idea, not the general idea, mathematical formula, or concept
+itself (the Idea-Expression Dichotomy). While this clause contractually binds
+those who agree to the License, stopping a third party who independently builds
+a similar mathematical system from public RFCs is legally difficult without
+patent protection.
+
+14. Prohibition on Machine Learning and AI Training
+[OPTIONAL - OWNER TO CONFIRM]
+You shall not use the Work, including Research Materials, formulas, schemas,
+and Software, to train, fine-tune, evaluate, or validate any artificial
+intelligence, machine learning model, large language model (LLM), or automated
+code generation system, nor include the Work in any dataset assembled for such
+purposes, without prior written Permission from the Licensor.
+
+In plain English:
+Companies cannot feed this repository into AI training datasets without
+explicit permission.
+
+-------------------------------------------------------------------------------
+D. CONDITIONS ON ANY PERMISSION GRANTED
+-------------------------------------------------------------------------------
+
+15. Specificity of Permission Grants
+Any Permission granted by the Licensor must be in a formal written instrument
+(or verified digital document) that expressly specifies:
+(a) The legal name of the permitted individual or entity;
+(b) The exact permitted scope and use case;
+(c) The exact duration (time limit) of the grant; and
+(d) The exact territory (geographical limit) of the grant.
+
+In plain English:
+Any permission must be in writing and must say exactly who gets it, for what,
+for how long, and in which city or country.
+
+Risk / Enforceability Note:
+Under Section 19(5) of the Indian Copyright Act, 1957, if an assignment or
+license does not state the duration, it is deemed to be 5 years. Under Section
+19(6), if the territorial extent is not stated, it is deemed to apply only
+within India. Setting duration and territory explicitly in every permission
+letter prevents these default statutory rules from applying unexpectedly
+[VERIFY Section 19 Copyright Act 1957].
+
+16. Non-Transferability
+Any Permission granted under this License is strictly personal to the named
+recipient and cannot be assigned, transferred, or shared with any third party
+without the prior written consent of the Licensor.
+
+In plain English:
+If you get permission, you cannot hand that permission over to someone else or
+another company.
+
+17. No Sublicensing
+No recipient of Permission has any right to sublicense, lease, or grant
+sub-permissions to any other person or organization.
+
+In plain English:
+You cannot give other people permission to use what you were permitted to use.
+
+18. Attribution Requirement
+Any permitted use, deployment, or display of the Work must prominently maintain
+all copyright notices and include the credit: "ARCUS by ToxArch (Dhanush B S)".
+
+In plain English:
+Whenever you are permitted to use this, you must keep the original copyright
+and creator credits visible.
+
+19. Revocation for Cause
+The Licensor reserves the right to revoke any Permission granted upon giving
+fourteen (14) days [OWNER TO CONFIRM: 14 vs 30 days] written notice if You
+breach any condition of the Permission or this License.
+
+In plain English:
+If you violate the terms of your permission, the owner can cancel your
+permission after giving you a 14-day written warning.
+
+20. Permission Application Process
+To request Permission, applicants must email the Licensor at the official
+contact address specified in Section 50, providing:
+(a) Full legal name, address, and corporate registration details;
+(b) Detailed technical description of intended use;
+(c) Subscriber base size and network topology (for Operators);
+(d) Target deployment territory and anticipated start date.
+The Licensor reserves absolute discretion to approve, condition, or deny any
+request without obligation to state reasons.
+
+In plain English:
+To ask for permission, you must email the owner with details about who you are,
+what you plan to do, and your network details.
+
+-------------------------------------------------------------------------------
+E. CONTRIBUTIONS
+-------------------------------------------------------------------------------
+
+21. Contributor License Agreement (CLA) Requirement
+All Contributions submitted to the Work are governed by the ARCUS Contributor
+License Agreement (CLA.md). Submission of a Contribution constitutes agreement
+to the CLA. A Developer Certificate of Origin (DCO) alone is not accepted
+because a DCO only certifies authorship but does not grant the broad
+relicensing rights necessary for the Licensor to manage the project's strategy.
+
+In plain English:
+Anyone submitting code or changes must sign the CLA, not just a simple DCO sign-
+off, so the owner retains full legal freedom to manage the project.
+
+22. Originality and Authority Warranty
+You warrant and represent that every Contribution You submit is entirely Your
+own original creation, that You possess the full unencumbered legal right to
+submit it, and that no employer, university, or third party holds any ownership,
+patent claim, or copyright interest in Your Contribution.
+
+In plain English:
+You promise that you wrote the code yourself and your boss or university does
+not own it.
+
+23. Broad Grant of Rights to Licensor
+By submitting a Contribution, You grant to the Licensor a perpetual, worldwide,
+irrevocable, royalty-free, transferable, sublicensable license to use, reproduce,
+modify, adapt, publish, distribute, execute, commercialize, and relicense the
+Contribution (in whole or in part) under any license terms whatsoever, including
+closed-source, proprietary, or standard open licenses.
+
+In plain English:
+You let the owner use, change, and relicense your contribution however they want
+forever, even if they decide to sell it commercially later.
+
+24. Contributor Copyright and Credit
+You retain Your underlying copyright in Your individual Contribution. The
+Licensor shall maintain an acknowledgment of Your authorship in an official
+CONTRIBUTORS file.
+
+In plain English:
+You still own your original contribution and your name will be credited in the
+project's list of contributors.
+
+25. No Reciprocal License Grant
+Your submission of a Contribution does not grant You any right or permission to
+use, commercialize, or deploy the rest of the Work beyond the permissions
+expressly set forth in this License.
+
+In plain English:
+Contributing a bug fix does not give you permission to take the whole software
+and use it in your company for free.
+
+26. Moral Rights
+To the maximum extent permitted by applicable law, You agree not to assert
+against the Licensor, its transferees, or licensees any moral rights (such as
+the right of integrity or objection to modification) that would restrict the
+Licensor from adapting, updating, or relicensing Your Contribution.
+
+In plain English:
+You agree not to sue the owner later complaining about how they edited, updated,
+or combined your contribution.
+
+Risk / Enforceability Note:
+Under Section 57 of the Indian Copyright Act, 1957, authors possess statutory
+"special rights" (moral rights) to claim authorship and restrain distortion or
+mutilation. Indian courts have historically held that moral rights cannot be
+wholly waived in advance by contract (Amar Nath Sehgal v. Union of India).
+However, an agreement not to assert these rights in relation to routine code
+refactoring is standard practice [VERIFY Section 57 Indian Copyright Act].
+
+-------------------------------------------------------------------------------
+F. NAMES AND BRANDING
+-------------------------------------------------------------------------------
+
+27. Trademark Reservation
+The names "ToxArch", "ARCUS", the ARCUS logo, and all associated brand marks
+are proprietary trademarks of the Licensor. This License grants no license or
+right to use any trademark, trade name, or service mark of the Licensor, except
+as strictly necessary for factual, non-confusing attribution of the Work's
+source.
+
+In plain English:
+You cannot use the name "ARCUS" or "ToxArch" or the logo to market your own
+products or services.
+
+28. No Implied Endorsement
+You shall not use the Licensor's name, brand, or reputation to claim, imply, or
+suggest any sponsorship, affiliation, endorsement, or approval by the Licensor
+without separate prior written authorization.
+
+In plain English:
+You cannot tell people that the creator or ToxArch endorses your network or
+business.
+
+-------------------------------------------------------------------------------
+G. PROTECTION FOR THE OWNER
+-------------------------------------------------------------------------------
+
+29. "AS IS" WARRANTY DISCLAIMER
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR
+IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, AND
+NON-INFRINGEMENT. THE ENTIRE RISK AS TO THE QUALITY, PERFORMANCE, AND
+EFFECTIVENESS OF THE WORK IS BORNE SOLELY BY YOU.
+
+In plain English:
+This work comes with zero guarantees. If something fails or does not work as
+expected, the creator is not responsible.
+
+30. No Legal, Regulatory, or Compliance Advice
+THE WORK, INCLUDING ALL ANALYSES OF THE INFORMATION TECHNOLOGY ACT, 2000,
+CERT-IN DIRECTIONS DATED 28 APRIL 2022, JAN VISHWAS ACT, 2023, BHARATIYA
+SAKSHYA ADHINIYAM, 2023 (BSA SECTION 63), AND DIGITAL PERSONAL DATA PROTECTION
+ACT, 2023 (DPDP), DOES NOT CONSTITUTE LEGAL ADVICE, REGULATORY COUNSEL, OR
+FORMAL STATUTORY OPINIONS. COMPLIANCE OBLIGATIONS REQUIRE INDEPENDENT REVIEW BY
+QUALIFIED ADVOCATES AND STATUTORY AUTHORITIES.
+
+In plain English:
+The regulatory explanations in this repository are engineering research, not
+legal advice from a lawyer. You must consult your own lawyer for legal matters.
+
+31. No Guarantee of Judicial Evidence Admissibility
+THE LICENSOR MAKES NO WARRANTY OR REPRESENTATION THAT ANY HASH, MERKLE TREE,
+LOG FORMAT, NTP CERTIFICATION, OR SECTION 63 BSA CERTIFICATE GENERATED OR
+DOCUMENTED BY THE WORK WILL BE ACCEPTED AS ADMISSIBLE EVIDENCE BY ANY COURT,
+POLICE INVESTIGATING OFFICER, TRIBUNAL, OR ADJUDICATING OFFICER UNDER INDIAN
+OR INTERNATIONAL LAW.
+
+In plain English:
+There is no guarantee that an Indian judge or police officer will accept these
+generated certificates in a court case.
+
+32. Operational Safety and Network Disruption Disclaimer
+AUTOMATED TELEMETRY SENSING, CARRIER-GRADE NAT PORT INVERSION, ROUTER RULE
+INJECTION, BGP FLOWSPEC ANNOUNCEMENTS, AND WALLED-GARDEN QUARANTINE ROUTING
+CARRY INHERENT OPERATIONAL RISKS OF NETWORK OUTAGES, PACKET DROPS, PACKET
+CORRUPTION, AND SUBSCRIBER DISCONNECTION. YOU ASSUME FULL AND EXCLUSIVE
+RESPONSIBILITY FOR ALL CONFIGURATIONS, PRE-DEPLOYMENT LAB TESTING, MANUAL
+SUPERVISION, AUDITING, AND EMERGENCY ROLLBACK MECHANISMS.
+
+In plain English:
+Changing router rules can crash networks or disconnect customers. If you run
+this and break an ISP network, it is 100% your responsibility.
+
+33. Limitation of Liability
+TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, IN NO EVENT SHALL THE
+LICENSOR, COPYRIGHT OWNER, OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+WITHOUT LIMITATION, LOSS OF PROFITS, LOSS OF SUBSCRIBER REVENUE, STATUTORY
+FINES IMPOSED BY CERT-IN OR DOT, REGULATORY PENALTIES UNDER JAN VISHWAS 2023,
+BUSINESS INTERRUPTION, DATA CORRUPTION, WRONGFUL SUBSCRIBER IDENTIFICATION, OR
+COST OF PROCUREMENT OF SUBSTITUTE SERVICES) ARISING IN ANY WAY OUT OF THE USE,
+INABILITY TO USE, OR OPERATION OF THE WORK, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGES. THE LICENSOR'S AGGREGATE CUMULATIVE LIABILITY UNDER ALL
+CLAIMS SHALL IN NO EVENT EXCEED ONE THOUSAND INDIAN RUPEES (INR 1,000)
+[AMOUNT TO BE CONFIRMED BY OWNER AND LAWYER].
+
+In plain English:
+The creator will not pay for any lost revenue, government fines, or customer
+damages resulting from your use of this work. Maximum liability is capped at
+INR 1,000.
+
+Risk / Enforceability Note:
+Under Section 73 and Section 74 of the Indian Contract Act, 1872, liability for
+fraud, willful misconduct, gross negligence, or death/personal injury cannot be
+lawfully excluded by contract. A court will disregard the cap in cases of gross
+negligence or intentional wrongdoing [VERIFY Indian Contract Act liability limits].
+
+34. User Indemnification
+If You are granted Permission to use the Work, You agree to indemnify, defend,
+and hold harmless the Licensor, copyright owner, and contributors from and
+against all claims, liabilities, losses, damages, government penalties, police
+inquiries, regulatory fines, and legal expenses (including reasonable advocate
+fees) arising directly or indirectly from Your use, network deployment, or
+operation of the Work.
+
+In plain English:
+If someone sues the owner or government fines them because of something you did
+with this project, you must pay the owner's legal costs and damages.
+
+-------------------------------------------------------------------------------
+H. RESPONSIBLE USE AND PRIVACY
+-------------------------------------------------------------------------------
+
+35. Compliance with Applicable Laws
+You agree to use the Work in strict compliance with all applicable local,
+state, and national laws, including the Information Technology Act, 2000, the
+Digital Personal Data Protection Act, 2023 (DPDP), and Department of
+Telecommunications (DoT) license mandates [VERIFY specific regulatory references].
+
+In plain English:
+You must obey all Indian cyber laws and data protection rules when using this.
+
+36. Purpose Limitation
+The Work's attribution, subscriber identification, and traffic analysis
+techniques are intended strictly for defensive network security, botnet
+suppression, and lawful response to authorized cybercrime notices. You shall
+not employ the Work for unlawful surveillance, stalkerware, political
+tracking, unauthorized eavesdropping, or privacy invasion.
+
+In plain English:
+This system is meant for stopping botnets and answering police inquiries, not
+spying on regular people.
+
+Risk / Enforceability Note:
+"Ethical use" and "purpose limitation" clauses are notoriously difficult to
+enforce legally in court because proving an operator's subjective intent is
+challenging. However, this clause allows the owner to terminate permission if
+egregious surveillance is uncovered.
+
+37. Operator Custody and Privacy Responsibility
+Operators alone are the data fiduciaries for their subscribers' personally
+identifiable information (PII). Operators bear exclusive legal responsibility
+for securing subscriber databases, obtaining necessary consents under DPDP
+2023, and complying with statutory retention standards. The Licensor has zero
+access to, custody over, or responsibility for any subscriber data processed
+by third-party deployments of the Work.
+
+In plain English:
+The ISP alone is legally responsible for protecting customer personal data.
+The creator of ARCUS never touches or sees customer records.
+
+38. Disclaimers Concerning Third-Party Misuse
+The Licensor shall not be held liable, criminally or civilly, for any illegal,
+unauthorized, or abusive use of the Work committed by third parties.
+
+In plain English:
+The creator is not responsible if a third party abuses these concepts or code.
+
+-------------------------------------------------------------------------------
+I. THIRD PARTIES AND INTELLECTUAL PROPERTY
+-------------------------------------------------------------------------------
+
+39. Third-Party Licenses and Open Standards
+The Work discusses, references, and integrates concepts from open technical
+standards published by the Internet Engineering Task Force (IETF) and open-
+source software engines (such as Suricata, GoFlow2, ClickHouse, and
+FreeRADIUS). All third-party standards, specifications, and software retain
+their respective copyrights and licenses as documented in the NOTICE file.
+No third-party license is modified by this License.
+
+In plain English:
+Third-party tools and RFC standards mentioned in this project belong to their
+respective owners and keep their own licenses.
+
+40. Patent Rights Explicitly Excluded
+No patent license, patent covenant, or patent immunity (express, implied, or
+by estoppel) is granted under this License. The Licensor reserves all patent
+rights, whether granted or pending. [OWNER TO CONFIRM].
+
+In plain English:
+This license does not give you any patent rights.
+
+41. Originality and Attribution Statement
+The Licensor confirms that the structural synthesis, mathematical models, and
+original documentation in the Work represent original authorship. Citations to
+public RFC standards, government notifications, and malware disassemblies are
+fairly attributed to their published primary sources.
+
+In plain English:
+The creator confirms that the original research is their own work, and that
+citations to public standards are properly credited.
+
+-------------------------------------------------------------------------------
+J. TERMINATION AND GENERAL TERMS
+-------------------------------------------------------------------------------
+
+42. Automatic Termination on Breach
+Any failure by You to comply with any term, condition, or restriction of this
+License shall automatically and immediately terminate all Your rights under
+this License without necessity of prior judicial notice or action. Upon
+termination, You must permanently delete and destroy all copies of the Work in
+Your possession.
+
+In plain English:
+If you break any rule in this license, your permission to use this work ends
+instantly, and you must delete all copies.
+
+43. Survival of Essential Clauses
+Sections 1, 2, 4, 10, 11, 13, 22, 23, 26, 27, 28, 29, 30, 31, 32, 33, 34, 37,
+38, 42, 43, 44, 45, 46, 47, and 48 shall survive any termination of this
+License indefinitely.
+
+In plain English:
+Disclaimers, liability limits, trademark rules, and dispute resolution terms
+stay active forever even if your permission is terminated.
+
+44. Governing Law
+This License, and all claims, disputes, or controversies arising out of or
+related to the Work, shall be governed by, construed, and enforced in
+accordance with the laws of the Republic of India, without regard to its
+conflict of law provisions.
+
+In plain English:
+Indian law governs this entire agreement.
+
+45. Exclusive Jurisdiction
+Subject to Section 46, the competent courts located in Bangalore, Karnataka,
+India [CITY TO BE CONFIRMED BY OWNER] shall have exclusive jurisdiction over
+all disputes arising out of or in connection with this License.
+
+In plain English:
+Any court cases regarding this project must be filed in the courts of
+Bangalore, India.
+
+46. Arbitration
+[OPTIONAL - OWNER TO CONFIRM]
+Any dispute or controversy arising out of this License may, at the Licensor's
+sole option, be referred to and finally resolved by arbitration administered in
+Bangalore, India under the Arbitration and Conciliation Act, 1996 [VERIFY].
+The arbitration shall be conducted by a sole arbitrator appointed by the
+Licensor. The language of arbitration shall be English.
+
+In plain English:
+The owner can choose to handle disputes through private arbitration in
+Bangalore instead of a long courtroom trial.
+
+Risk / Enforceability Note:
+Under Indian arbitration law (Perkins Eastman Architects DPC v. HSCC (India)
+Ltd.), a clause allowing only one party to unilaterally appoint a sole
+arbitrator is legally invalid. The arbitrator must be appointed by mutual
+agreement or through the High Court under Section 11 of the Arbitration and
+Conciliation Act, 1996 [VERIFY arbitration appointment mechanism].
+
+47. Severability
+If any provision of this License is found by a court of competent jurisdiction
+to be invalid, illegal, or unenforceable, that specific provision shall be
+severed or modified to the minimum extent necessary to make it valid, and all
+remaining provisions of this License shall continue in full force and effect.
+
+In plain English:
+If a judge strikes down one clause as invalid, the rest of the license stays
+100% active.
+
+48. Entire Agreement
+This License constitutes the entire agreement between You and the Licensor
+concerning the subject matter hereof, superseding all prior oral or written
+understandings, representations, or discussions.
+
+In plain English:
+This written document is the complete agreement. Past conversations or chat
+messages do not change it.
+
+49. Versioning and Updates
+The Licensor reserves the right to publish revised or updated versions of this
+License. Any new version shall apply prospectively to releases published after
+such update, without invalidating permissions previously granted under earlier
+versions.
+
+In plain English:
+The owner can release a new version of the license in the future, but old
+versions stay valid for what was previously released under them.
+
+50. Official Contact Address
+For all permission requests, legal inquiries, licensing notices, and
+responsible security disclosures, contact the Licensor directly at:
+Email: bsd98574@gmail.com [OWNER TO CONFIRM OFFICIAL LEGAL EMAIL]
+Repository: https://github.com/ToxArch/arcus
+
+In plain English:
+This is the official email address to contact for permissions or legal notices.
+===============================================================================

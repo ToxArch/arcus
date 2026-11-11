@@ -1,0 +1,54 @@
+DRAFT - NOT LEGALLY REVIEWED
+===============================================================================
+ARCUS THIRD-PARTY NOTICES AND ATTRIBUTION
+===============================================================================
+
+ARCUS incorporates architectural concepts, references public technical
+standards, and plans integration with third-party open-source components.
+All third-party trademarks, copyrights, and standards remain the property of
+their respective owners.
+
+The licenses listed below are compiled for factual reference and are subject
+to legal verification [VERIFY]:
+
+1. Primary Technical Standards (IETF RFCs)
+   - Specifications: RFC 6888, RFC 6598, RFC 7422, RFC 7011, RFC 8158,
+     RFC 6561, RFC 8908, RFC 8910, RFC 2865, RFC 2866, RFC 2827 (BCP 38).
+   - Copyright: Internet Engineering Task Force (IETF) / Internet Society (ISOC).
+   - Terms: IETF Trust Provisions of Dec 28, 2009 (RFC 5378). Used under fair
+     academic citation and standard reference. [VERIFY]
+
+2. GoFlow2 (Telemetry Ingestion Engine)
+   - Copyright: (c) Cloudflare, Inc. / GoFlow2 contributors.
+   - License: BSD 3-Clause License [VERIFY against upstream repository].
+   - Usage: Planned out-of-band flow telemetry collector.
+
+3. Suricata (Line-Rate Deep Packet Inspection)
+   - Copyright: (c) Open Information Security Foundation (OISF).
+   - License: GNU General Public License version 2 (GPLv2) [VERIFY].
+   - Usage: Out-of-band packet inspection via SPAN mirror. Note: If Suricata is
+     invoked strictly as an external out-of-band daemon and not dynamically
+     linked, it operates alongside ARCUS without triggering GPL copyleft
+     obligations on proprietary code [VERIFY GPLv2 boundary with lawyer].
+
+4. ClickHouse (Columnar Storage Engine)
+   - Copyright: (c) ClickHouse, Inc.
+   - License: Apache License 2.0 [VERIFY].
+   - Usage: Independent analytical storage backend.
+
+5. FreeRADIUS (AAA Accounting Engine)
+   - Copyright: (c) The FreeRADIUS Server Project.
+   - License: GNU General Public License version 2 (GPLv2) [VERIFY].
+   - Usage: Access BNG session accounting backend queried via database reader.
+
+6. Intel Hyperscan (Pattern Matching Library)
+   - Copyright: (c) Intel Corporation.
+   - License: BSD 3-Clause License [VERIFY].
+   - Usage: Regular expression acceleration library for DPI.
+
+7. Malware Disassembly and Threat Intel Citations
+   - References to Mirai source code (Anna-senpai leak, Sept 2016), Mozi P2P
+     Kademlia structures (Qihoo 360 Netlab), and BadBox malware (HUMAN Security)
+     are referenced strictly for threat analysis and defense synthesis under
+     fair dealing provisions of Indian copyright law.
+===============================================================================
